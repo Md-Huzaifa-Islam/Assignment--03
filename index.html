@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 03</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-manrope">
+    <!-- header section  -->
+    <header class="px-5 pt-9 md:container md:mx-auto md:pt-10 lg:pt-12">
+      <!-- nav bar section  -->
+      <nav class="flex items-center justify-between">
+        <!-- brand name  full part   -->
+        <div>
+          <a class="flex items-center space-x-2">
+            <!-- arrow container -->
+            <div class="rounded-full bg-[#ABEF5F] px-[10px] py-1">
+              <i
+                class="fa-solid fa-arrow-right-long fa-rotate-by fa-xs"
+                style="color: #1c1c1c; --fa-rotate-angle: 320deg"
+              ></i>
+            </div>
+            <!-- brand name container -->
+            <p class="text-3xl font-extrabold text-[#212121]">Rinterio</p>
+          </a>
+        </div>
+
+        <!-- center menu part -->
+        <div class="hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a class="text-base font-extrabold text-[#494949]">Home</a>
+            </li>
+            <li>
+              <a class="text-base font-normal text-[#737373]">Services</a>
+            </li>
+            <li>
+              <a class="text-base font-normal text-[#737373]">Portfolio</a>
+            </li>
+            <li><a class="text-base font-normal text-[#737373]">Blogs</a></li>
+            <li>
+              <a class="text-base font-normal text-[#737373]">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- last part  -->
+        <div class="sm:flex sm:items-center sm:space-x-3">
+          <!-- search container  -->
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost hidden rounded-full bg-white p-[10px] md:flex"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              viewBox="0 0 512 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                fill="#737373"
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+          </div>
+
+          <!-- shop container  -->
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost hidden rounded-full bg-white p-[10px] md:flex"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-7 text-[#737373]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+              />
+            </svg>
+          </div>
+
+          <!-- btn container -->
+          <a
+            class="hidden cursor-pointer space-x-1 rounded-full bg-[#ABEF5F] px-5 py-3 sm:flex"
+          >
+            <!-- btn text -->
+            <p class="text-xl font-extrabold text-[#1C1C1C]">Book Consult</p>
+            <!-- btn logo -->
+            <div class="rounded-full bg-[#1C1C1C] px-[10px] py-1">
+              <i
+                class="fa-solid fa-arrow-right-long fa-rotate-by fa-xs"
+                style="color: white; --fa-rotate-angle: 320deg"
+              ></i>
+            </div>
+          </a>
+          <!-- drop down container  -->
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost rounded-full bg-white p-[10px] lg:hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                width="24"
+                viewBox="0 0 448 512"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  fill="#737373"
+                  d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a class="text-base font-extrabold text-[#494949]">Home</a>
+              </li>
+              <li>
+                <a class="text-base font-normal text-[#737373]">Services</a>
+              </li>
+              <li>
+                <a class="text-base font-normal text-[#737373]">Portfolio</a>
+              </li>
+              <li><a class="text-base font-normal text-[#737373]">Blogs</a></li>
+              <li>
+                <a class="text-base font-normal text-[#737373]">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
