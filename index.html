@@ -15,19 +15,30 @@
   </head>
   <body class="font-manrope">
     <!-- header section  -->
-    <header class="px-5 pt-9 md:container md:mx-auto md:pt-10 lg:pt-12">
+    <header
+      class="space-y-7 px-5 pt-9 md:container md:mx-auto md:space-y-12 md:pt-10 lg:space-y-10 lg:pt-12"
+    >
       <!-- nav bar section  -->
       <nav class="flex items-center justify-between">
         <!-- brand name  full part   -->
         <div>
           <a class="flex items-center space-x-2">
             <!-- arrow container -->
-            <div class="rounded-full bg-[#ABEF5F] px-[10px] py-1">
-              <i
-                class="fa-solid fa-arrow-right-long fa-rotate-by fa-xs"
-                style="color: #1c1c1c; --fa-rotate-angle: 320deg"
-              ></i>
+            <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="12"
+                width="12"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  fill="#1c1c1c"
+                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+                />
+              </svg>
             </div>
+
             <!-- brand name container -->
             <p class="text-3xl font-extrabold text-[#212121]">Rinterio</p>
           </a>
@@ -58,7 +69,7 @@
           <div
             tabindex="0"
             role="button"
-            class="btn btn-ghost hidden rounded-full bg-white p-[10px] md:flex"
+            class="btn btn-ghost hidden rounded-full bg-white p-[10px] md:flex md:items-center md:justify-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +89,7 @@
           <div
             tabindex="0"
             role="button"
-            class="btn btn-ghost hidden rounded-full bg-white p-[10px] md:flex"
+            class="btn btn-ghost hidden rounded-full bg-white p-[10px] md:flex md:items-center md:justify-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,16 +109,24 @@
 
           <!-- btn container -->
           <a
-            class="hidden cursor-pointer space-x-1 rounded-full bg-[#ABEF5F] px-5 py-3 sm:flex"
+            class="btn hidden cursor-pointer space-x-1 rounded-full bg-[#ABEF5F] sm:flex"
           >
             <!-- btn text -->
             <p class="text-xl font-extrabold text-[#1C1C1C]">Book Consult</p>
             <!-- btn logo -->
-            <div class="rounded-full bg-[#1C1C1C] px-[10px] py-1">
-              <i
-                class="fa-solid fa-arrow-right-long fa-rotate-by fa-xs"
-                style="color: white; --fa-rotate-angle: 320deg"
-              ></i>
+            <div class="-rotate-45 rounded-full bg-[#1C1C1C] p-[10px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="12"
+                width="12"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  fill="#FFFFFF"
+                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+                />
+              </svg>
             </div>
           </a>
           <!-- drop down container  -->
@@ -132,7 +151,7 @@
             </div>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
             >
               <li>
                 <a class="text-base font-extrabold text-[#494949]">Home</a>
@@ -151,6 +170,54 @@
           </div>
         </div>
       </nav>
+
+      <!-- banner section  -->
+
+      <div
+        class="flex flex-col items-center space-y-5 md:mx-auto md:max-w-2xl lg:w-11/12 lg:max-w-5xl lg:space-y-8 2xl:max-w-none"
+      >
+        <!-- first banner part  -->
+        <div
+          class="flex flex-col items-center space-y-4 text-center lg:space-y-6"
+        >
+          <div class="w-10/12 md:max-w-md lg:max-w-xl">
+            <img src="./assets/images/banner.png" class="w-full" alt="" />
+          </div>
+          <h1
+            class="text-3xl font-extrabold text-[#212121] md:text-4xl lg:text-6xl"
+          >
+            A barn house of this design has a striking appearance
+          </h1>
+          <p class="text-sm font-medium text-[#494949] md:text-base">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents, and
+            large windows that flood the space with natural light.
+          </p>
+        </div>
+
+        <!-- banner button part -->
+        <a
+          class="btn btn-block cursor-pointer space-x-1 rounded-full border border-solid border-[#ABEF5F] bg-[#ABEF5F80] md:w-auto"
+        >
+          <!-- btn text -->
+          <p class="text-xl font-bold text-[#212121]">View Details</p>
+          <!-- btn logo -->
+          <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="12"
+              width="12"
+              viewBox="0 0 512 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                fill="#1c1c1c"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
     </header>
   </body>
 </html>
