@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .start {
+    @apply mx-auto flex w-max items-center space-x-1 rounded-full bg-white px-4 py-2;
+  }
+  .sectiontext {
+    @apply mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6;
+  }
+  .sectiontitle {
+    @apply text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl;
+  }
+  .sectioninfo {
+    @apply text-sm font-medium text-[#494949] md:text-base;
+  }
+}
