@@ -1,78 +1,129 @@
 <!doctype html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 03</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <!-- font cdn  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- tailwind cdn  -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 03</title>
+  <link rel="stylesheet" href="./styles/style.css" />
 
-    <!-- tailwind config  -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              manrope: ["Manrope", "sans-serif"],
-            },
+  <!-- daisy ui and tailwind cdn  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+    header {
+      background-image: linear-gradient(0deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 0) 100%);
+    }
+  </style>
+
+
+  <!-- tailwind config  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            manrope: ["Manrope", "sans-serif"],
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
+</head>
 
-    <style>
-      header {
-        background-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 0) 100%
-        );
-      }
-    </style>
-  </head>
-  <body class="font-manrope">
-    <!-- header section  -->
-    <header
-      class="space-y-7 px-5 pb-10 pt-9 md:container md:mx-auto md:space-y-12 md:pb-20 md:pt-10 lg:space-y-10 lg:pb-32 lg:pt-12"
-    >
-      <!-- nav bar section  -->
-      <nav class="flex items-center justify-between">
-        <!-- brand name  full part   -->
-        <div>
-          <a class="flex items-center space-x-2">
-            <!-- arrow container -->
-            <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                width="12"
-                viewBox="0 0 512 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#1c1c1c"
-                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-            </div>
+<body class="font-manrope">
+  <!-- header section  -->
+  <header
+    class="space-y-7 px-5 pb-10 pt-9 md:container md:mx-auto md:space-y-12 md:pb-20 md:pt-10 lg:space-y-10 lg:pb-32 lg:pt-12">
+    <!-- nav bar section  -->
+    <nav class="flex items-center justify-between">
+      <!-- brand name  full part   -->
+      <div>
+        <a class="flex items-center space-x-2">
+          <!-- arrow container -->
+          <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#1c1c1c"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+            </svg>
+          </div>
 
-            <!-- brand name container -->
-            <p class="text-3xl font-extrabold text-[#212121]">Rinterio</p>
-          </a>
+          <!-- brand name container -->
+          <p class="text-3xl font-extrabold text-[#212121]">Rinterio</p>
+        </a>
+      </div>
+
+      <!-- center menu part -->
+      <div class="hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li>
+            <a class="text-base font-extrabold text-[#494949]">Home</a>
+          </li>
+          <li>
+            <a class="text-base font-normal text-[#737373]">Services</a>
+          </li>
+          <li>
+            <a class="text-base font-normal text-[#737373]">Portfolio</a>
+          </li>
+          <li><a class="text-base font-normal text-[#737373]">Blogs</a></li>
+          <li>
+            <a class="text-base font-normal text-[#737373]">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- last part  -->
+      <div class="sm:flex sm:items-center sm:space-x-3">
+        <!-- search container  -->
+        <div tabindex="0" role="button"
+          class="btn btn-ghost hidden rounded-full border border-[#E9E9E9] bg-white p-[10px] md:flex md:items-center md:justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path fill="#737373"
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+          </svg>
         </div>
 
-        <!-- center menu part -->
-        <div class="hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
+        <!-- shop container  -->
+        <div tabindex="0" role="button"
+          class="btn btn-ghost hidden rounded-full border border-[#E9E9E9] bg-white p-[10px] md:flex md:items-center md:justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-7 text-[#737373]">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+        </div>
+
+        <!-- btn container -->
+        <a class="btn hidden cursor-pointer space-x-2 rounded-full bg-[#ABEF5F] sm:flex">
+          <!-- btn text -->
+          <p class="text-xl font-extrabold text-[#1C1C1C]">Book Consult</p>
+          <!-- btn logo -->
+          <div class="-rotate-45 rounded-full bg-[#1C1C1C] p-[10px]">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#FFFFFF"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+            </svg>
+          </div>
+        </a>
+        <!-- drop down container  -->
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button"
+            class="btn btn-ghost rounded-full border border-[#E9E9E9] bg-white p-[10px] lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 448 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#737373"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
             <li>
               <a class="text-base font-extrabold text-[#494949]">Home</a>
             </li>
@@ -88,732 +139,437 @@
             </li>
           </ul>
         </div>
+      </div>
+    </nav>
 
-        <!-- last part  -->
-        <div class="sm:flex sm:items-center sm:space-x-3">
-          <!-- search container  -->
-          <div
-            tabindex="0"
-            role="button"
-            class="btn btn-ghost hidden rounded-full border border-[#E9E9E9] bg-white p-[10px] md:flex md:items-center md:justify-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24"
-              width="24"
-              viewBox="0 0 512 512"
-            >
-              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-              <path
-                fill="#737373"
-                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-              />
-            </svg>
-          </div>
+    <!-- banner section  -->
 
-          <!-- shop container  -->
-          <div
-            tabindex="0"
-            role="button"
-            class="btn btn-ghost hidden rounded-full border border-[#E9E9E9] bg-white p-[10px] md:flex md:items-center md:justify-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-7 text-[#737373]"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-              />
-            </svg>
-          </div>
-
-          <!-- btn container -->
-          <a
-            class="btn hidden cursor-pointer space-x-2 rounded-full bg-[#ABEF5F] sm:flex"
-          >
-            <!-- btn text -->
-            <p class="text-xl font-extrabold text-[#1C1C1C]">Book Consult</p>
-            <!-- btn logo -->
-            <div class="-rotate-45 rounded-full bg-[#1C1C1C] p-[10px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                width="12"
-                viewBox="0 0 512 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#FFFFFF"
-                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-            </div>
-          </a>
-          <!-- drop down container  -->
-          <div class="dropdown dropdown-end">
-            <div
-              tabindex="0"
-              role="button"
-              class="btn btn-ghost rounded-full border border-[#E9E9E9] bg-white p-[10px] lg:hidden"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                width="24"
-                viewBox="0 0 448 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#737373"
-                  d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-                />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-            >
-              <li>
-                <a class="text-base font-extrabold text-[#494949]">Home</a>
-              </li>
-              <li>
-                <a class="text-base font-normal text-[#737373]">Services</a>
-              </li>
-              <li>
-                <a class="text-base font-normal text-[#737373]">Portfolio</a>
-              </li>
-              <li><a class="text-base font-normal text-[#737373]">Blogs</a></li>
-              <li>
-                <a class="text-base font-normal text-[#737373]">Contact Us</a>
-              </li>
-            </ul>
-          </div>
+    <div
+      class="flex flex-col items-center space-y-5 md:mx-auto md:max-w-2xl lg:w-11/12 lg:max-w-5xl lg:space-y-8 2xl:max-w-none">
+      <!-- first banner part  -->
+      <div class="flex flex-col items-center space-y-4 text-center lg:space-y-6">
+        <div class="w-10/12 md:max-w-md lg:max-w-xl">
+          <img src="./assets/images/banner.png" class="w-full" alt="" />
         </div>
-      </nav>
+        <h1 class="text-3xl font-extrabold text-[#212121] md:text-4xl lg:text-6xl">
+          A barn house of this design has a striking appearance
+        </h1>
+        <p class="text-sm font-medium text-[#494949] md:text-base">
+          The barn house captivates with its blend of rustic charm and modern
+          sophistication, featuring weathered wood, sleek metal accents, and
+          large windows that flood the space with natural light.
+        </p>
+      </div>
 
-      <!-- banner section  -->
+      <!-- banner button part -->
+      <a
+        class="btn btn-block cursor-pointer space-x-1 rounded-full border border-solid border-[#ABEF5F] bg-[#ABEF5F80] md:w-auto">
+        <!-- btn text -->
+        <p class="text-xl font-bold text-[#212121]">View Details</p>
+        <!-- btn logo -->
+        <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+          <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path fill="#1c1c1c"
+              d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </header>
 
-      <div
-        class="flex flex-col items-center space-y-5 md:mx-auto md:max-w-2xl lg:w-11/12 lg:max-w-5xl lg:space-y-8 2xl:max-w-none"
-      >
-        <!-- first banner part  -->
-        <div
-          class="flex flex-col items-center space-y-4 text-center lg:space-y-6"
-        >
-          <div class="w-10/12 md:max-w-md lg:max-w-xl">
-            <img src="./assets/images/banner.png" class="w-full" alt="" />
+  <!-- main section  -->
+
+  <main class="bg-[#F4F4F4]">
+    <!-- We design thoughtful, liveable spaces section -->
+    <!-- Our Works Process  -->
+    <section class="px-5 pt-8 md:container md:mx-auto md:pt-20 lg:pb-28 lg:pt-24">
+      <div class="space-y-6 lg:space-y-8">
+        <!-- Text part  -->
+        <div class="mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6">
+          <!-- badge part -->
+          <div class="mx-auto flex w-max items-center space-x-1 rounded-full bg-white px-4 py-2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#494949"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+            </svg>
+            <p class="">How we works</p>
           </div>
-          <h1
-            class="text-3xl font-extrabold text-[#212121] md:text-4xl lg:text-6xl"
-          >
-            A barn house of this design has a striking appearance
+          <!-- other part  -->
+          <h1 class="text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl">
+            Our Works Process
           </h1>
           <p class="text-sm font-medium text-[#494949] md:text-base">
-            The barn house captivates with its blend of rustic charm and modern
-            sophistication, featuring weathered wood, sleek metal accents, and
-            large windows that flood the space with natural light.
+            The barn house captivates with its blend of rustic charm and
+            modern sophistication, featuring weathered wood, sleek metal
+            accents.
           </p>
         </div>
 
-        <!-- banner button part -->
-        <a
-          class="btn btn-block cursor-pointer space-x-1 rounded-full border border-solid border-[#ABEF5F] bg-[#ABEF5F80] md:w-auto"
-        >
-          <!-- btn text -->
-          <p class="text-xl font-bold text-[#212121]">View Details</p>
-          <!-- btn logo -->
-          <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="12"
-              width="12"
-              viewBox="0 0 512 512"
-            >
-              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-              <path
-                fill="#1c1c1c"
-                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-              />
-            </svg>
+        <!-- container part  -->
+        <div class="space-y-4 md:grid md:grid-cols-2 md:gap-5 md:space-y-0 lg:grid-cols-4 lg:gap-6">
+          <div class="w-full space-y-2 rounded-2xl bg-[#E7C1D3] p-6 md:w-auto">
+            <div class="w-12">
+              <img src="./assets/images/concept.png" class="w-full" alt="" />
+            </div>
+            <h3 class="text-xl font-extrabold text-[#1C1C1C]">Concept</h3>
+            <p class="font-medium text-[#494949]">
+              The barn house captivates with its blend of rustic charm and
+              modern.
+            </p>
           </div>
-        </a>
+          <div class="w-full space-y-2 rounded-2xl bg-[#EFDA6E] p-6 md:w-auto">
+            <div class="w-12">
+              <img src="./assets/images/flow-chart.png" class="w-full" alt="" />
+            </div>
+            <h3 class="text-xl font-extrabold text-[#1C1C1C]">
+              Design Process
+            </h3>
+            <p class="font-medium text-[#494949]">
+              The barn house captivates with its blend of rustic charm and
+              modern.
+            </p>
+          </div>
+          <div class="w-full space-y-2 rounded-2xl bg-[#A4DAC3] p-6 md:w-auto">
+            <div class="w-12">
+              <img src="./assets/images/vision.png" class="w-full" alt="" />
+            </div>
+            <h3 class="text-xl font-extrabold text-[#1C1C1C]">Supervision</h3>
+            <p class="font-medium text-[#494949]">
+              The barn house captivates with its blend of rustic charm and
+              modern.
+            </p>
+          </div>
+          <div class="w-full space-y-2 rounded-2xl bg-[#77AAEA] p-6 md:w-auto">
+            <div class="w-12">
+              <img src="./assets/images/budget-planning.png" class="w-full" alt="" />
+            </div>
+            <h3 class="text-xl font-extrabold text-[#1C1C1C]">
+              Budget Planning
+            </h3>
+            <p class="font-medium text-[#494949]">
+              The barn house captivates with its blend of rustic charm and
+              modern.
+            </p>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <!-- main section  -->
-
-    <main class="bg-[#F4F4F4]">
-      <!-- We design thoughtful, liveable spaces section -->
-      <!-- Our Works Process  -->
-      <section
-        class="px-5 pt-8 md:container md:mx-auto md:pt-20 lg:pb-28 lg:pt-24"
-      >
-        <div class="space-y-6 lg:space-y-8">
-          <!-- Text part  -->
-          <div class="mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6">
-            <!-- badge part -->
-            <div
-              class="mx-auto flex w-max items-center space-x-1 rounded-full bg-white px-4 py-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                width="12"
-                viewBox="0 0 512 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#494949"
-                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-              <p class="">How we works</p>
-            </div>
-            <!-- other part  -->
-            <h1
-              class="text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl"
-            >
-              Our Works Process
-            </h1>
-            <p class="text-sm font-medium text-[#494949] md:text-base">
-              The barn house captivates with its blend of rustic charm and
-              modern sophistication, featuring weathered wood, sleek metal
-              accents.
-            </p>
+    <!-- Read Our Articles and News -->
+    <section class="px-5 pb-8 pt-8 md:container md:mx-auto md:pb-[72px] md:pt-20 lg:pb-28 lg:pt-24">
+      <div class="space-y-6 lg:space-y-8">
+        <!-- Text part  -->
+        <div class="mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6">
+          <!-- badge part -->
+          <div class="mx-auto flex w-max items-center space-x-1 rounded-full bg-white px-4 py-2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#494949"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+            </svg>
+            <p class="">Rinterio News</p>
           </div>
-
-          <!-- container part  -->
-          <div
-            class="space-y-4 md:grid md:grid-cols-2 md:gap-5 md:space-y-0 lg:grid-cols-4 lg:gap-6"
-          >
-            <div
-              class="w-full space-y-2 rounded-2xl bg-[#E7C1D3] p-6 md:w-auto"
-            >
-              <div class="w-12">
-                <img src="./assets/images/concept.png" class="w-full" alt="" />
-              </div>
-              <h3 class="text-xl font-extrabold text-[#1C1C1C]">Concept</h3>
-              <p class="font-medium text-[#494949]">
-                The barn house captivates with its blend of rustic charm and
-                modern.
-              </p>
-            </div>
-            <div
-              class="w-full space-y-2 rounded-2xl bg-[#EFDA6E] p-6 md:w-auto"
-            >
-              <div class="w-12">
-                <img
-                  src="./assets/images/flow-chart.png"
-                  class="w-full"
-                  alt=""
-                />
-              </div>
-              <h3 class="text-xl font-extrabold text-[#1C1C1C]">
-                Design Process
-              </h3>
-              <p class="font-medium text-[#494949]">
-                The barn house captivates with its blend of rustic charm and
-                modern.
-              </p>
-            </div>
-            <div
-              class="w-full space-y-2 rounded-2xl bg-[#A4DAC3] p-6 md:w-auto"
-            >
-              <div class="w-12">
-                <img src="./assets/images/vision.png" class="w-full" alt="" />
-              </div>
-              <h3 class="text-xl font-extrabold text-[#1C1C1C]">Supervision</h3>
-              <p class="font-medium text-[#494949]">
-                The barn house captivates with its blend of rustic charm and
-                modern.
-              </p>
-            </div>
-            <div
-              class="w-full space-y-2 rounded-2xl bg-[#77AAEA] p-6 md:w-auto"
-            >
-              <div class="w-12">
-                <img
-                  src="./assets/images/budget-planning.png"
-                  class="w-full"
-                  alt=""
-                />
-              </div>
-              <h3 class="text-xl font-extrabold text-[#1C1C1C]">
-                Budget Planning
-              </h3>
-              <p class="font-medium text-[#494949]">
-                The barn house captivates with its blend of rustic charm and
-                modern.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Read Our Articles and News -->
-      <section
-        class="px-5 pb-8 pt-8 md:container md:mx-auto md:pb-[72px] md:pt-20 lg:pb-28 lg:pt-24"
-      >
-        <div class="space-y-6 lg:space-y-8">
-          <!-- Text part  -->
-          <div class="mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6">
-            <!-- badge part -->
-            <div
-              class="mx-auto flex w-max items-center space-x-1 rounded-full bg-white px-4 py-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                width="12"
-                viewBox="0 0 512 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#494949"
-                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-              <p class="">Rinterio News</p>
-            </div>
-            <!-- other part  -->
-            <h1
-              class="text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl"
-            >
-              Read Our Articles and News
-            </h1>
-            <p class="text-sm font-medium text-[#494949] md:text-base">
-              The barn house captivates with its blend of rustic charm and
-              modern sophistication, featuring weathered wood, sleek metal
-              accents.
-            </p>
-          </div>
-
-          <!-- container part  -->
-          <div class="space-y-6 md:space-y-5 lg:flex lg:space-x-6 lg:space-y-0">
-            <!-- card number 1 -->
-            <div
-              class="w-full space-y-4 rounded-2xl bg-white p-5 md:flex md:items-center md:space-x-4 lg:inline-block"
-            >
-              <div class="md:w-[400px] lg:w-auto">
-                <img src="./assets/images/article1.png" class="w-full" alt="" />
-              </div>
-              <div class="space-y-4">
-                <div class="flex space-x-3">
-                  <div class="flex space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-5 text-[#737373]"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
-                      />
-                    </svg>
-
-                    <p class="text-sm font-medium text-[#737373]">
-                      July14, 2024
-                    </p>
-                  </div>
-                  <div class="flex space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-5 text-[#737373]"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
-                    </svg>
-
-                    <p class="text-sm font-medium text-[#737373]">
-                      July14, 2024
-                    </p>
-                  </div>
-                </div>
-                <h2 class="text-xl font-extrabold text-[#494949]">
-                  How to choose the furniture right of your home.
-                </h2>
-                <p class="text-base font-normal text-[#737373]">
-                  The barn house captivates with its blend of rustic charm and
-                  modern.
-                </p>
-                <a class="flex cursor-pointer items-center space-x-2">
-                  <!-- btn text -->
-                  <p class="text-base font-bold text-[#212121] md:text-lg">
-                    Read More
-                  </p>
-                  <!-- btn logo -->
-                  <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="12"
-                      width="12"
-                      viewBox="0 0 512 512"
-                    >
-                      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        fill="#1c1c1c"
-                        d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- card number 2 -->
-            <div
-              class="w-full space-y-4 rounded-2xl bg-white p-5 md:flex md:items-center md:space-x-4 lg:inline-block"
-            >
-              <div class="md:w-[400px] lg:w-auto">
-                <img src="./assets/images/article2.png" class="w-full" alt="" />
-              </div>
-              <div class="space-y-4">
-                <div class="flex space-x-3">
-                  <div class="flex space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-5 text-[#737373]"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
-                      />
-                    </svg>
-
-                    <p class="text-sm font-medium text-[#737373]">
-                      July14, 2024
-                    </p>
-                  </div>
-                  <div class="flex space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-5 text-[#737373]"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
-                    </svg>
-
-                    <p class="text-sm font-medium text-[#737373]">
-                      July14, 2024
-                    </p>
-                  </div>
-                </div>
-                <h2 class="text-xl font-extrabold text-[#494949]">
-                  How to choose the furniture right of your home.
-                </h2>
-                <p class="text-base font-normal text-[#737373]">
-                  The barn house captivates with its blend of rustic charm and
-                  modern.
-                </p>
-                <a class="flex cursor-pointer items-center space-x-2">
-                  <!-- btn text -->
-                  <p class="text-base font-bold text-[#212121] md:text-lg">
-                    Read More
-                  </p>
-                  <!-- btn logo -->
-                  <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="12"
-                      width="12"
-                      viewBox="0 0 512 512"
-                    >
-                      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        fill="#1c1c1c"
-                        d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- card number 3 -->
-            <div
-              class="w-full space-y-4 rounded-2xl bg-white p-5 md:flex md:items-center md:space-x-4 lg:inline-block"
-            >
-              <div class="md:w-[400px] lg:w-auto">
-                <img src="./assets/images/article3.png" class="w-full" alt="" />
-              </div>
-              <div class="space-y-4">
-                <div class="flex space-x-3">
-                  <div class="flex space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-5 text-[#737373]"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
-                      />
-                    </svg>
-
-                    <p class="text-sm font-medium text-[#737373]">
-                      July14, 2024
-                    </p>
-                  </div>
-                  <div class="flex space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-5 text-[#737373]"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
-                    </svg>
-
-                    <p class="text-sm font-medium text-[#737373]">
-                      July14, 2024
-                    </p>
-                  </div>
-                </div>
-                <h2 class="text-xl font-extrabold text-[#494949]">
-                  How to choose the furniture right of your home.
-                </h2>
-                <p class="text-base font-normal text-[#737373]">
-                  The barn house captivates with its blend of rustic charm and
-                  modern.
-                </p>
-                <a class="flex cursor-pointer items-center space-x-2">
-                  <!-- btn text -->
-                  <p class="text-base font-bold text-[#212121] md:text-lg">
-                    Read More
-                  </p>
-                  <!-- btn logo -->
-                  <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="12"
-                      width="12"
-                      viewBox="0 0 512 512"
-                    >
-                      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        fill="#1c1c1c"
-                        d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Let’s Discuss Next Project -->
-      <section
-        class="border-4 border-solid border-white bg-cover bg-center bg-no-repeat px-6 py-8 md:border-8 md:py-[72px] lg:py-24"
-        style="background-image: url(&quot;./assets/images/bg.jpg&quot;)"
-      >
-        <div class="container mx-auto max-w-4xl space-y-8">
-          <!-- Text part  -->
-          <div class="mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6">
-            <!-- badge part -->
-            <div
-              class="mx-auto flex w-max items-center space-x-1 rounded-full bg-[#ABEF5F33] bg-white px-4 py-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                width="12"
-                viewBox="0 0 512 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#494949"
-                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-              <p class="">Let’s Connect</p>
-            </div>
-            <!-- other part  -->
-            <h1
-              class="text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl"
-            >
-              Let’s Discuss Next Project
-            </h1>
-            <p class="text-sm font-medium text-[#494949] md:text-base">
-              The barn house captivates with its blend of rustic charm and
-              modern sophistication, featuring weathered wood, sleek metal
-              accents.
-            </p>
-          </div>
-
-          <!-- container part  -->
-          <div class="flex flex-col space-y-6">
-            <div
-              class="grid grid-cols-1 gap-y-5 md:grid-cols-2 md:gap-x-5 md:gap-y-6 lg:gap-x-6"
-            >
-              <input
-                type="text"
-                class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
-                placeholder="First Name*"
-              />
-              <input
-                type="text"
-                class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
-                placeholder="Last Name*"
-              />
-              <input
-                type="text"
-                class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
-                placeholder="Phone Number*"
-              />
-              <input
-                type="text"
-                class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
-                placeholder="Email Number*"
-              />
-            </div>
-            <textarea
-              name=""
-              id=""
-              class="rounded-[32px] border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
-              placeholder="Write your message here"
-              rows="8"
-            ></textarea>
-          </div>
-          <a
-            class="btn btn-block cursor-pointer space-x-2 rounded-full bg-[#ABEF5F] sm:flex"
-          >
-            <!-- btn text -->
-            <p class="text-xl font-extrabold text-[#1C1C1C]">Send Mail</p>
-            <!-- btn logo -->
-            <div class="-rotate-45 rounded-full bg-[#1C1C1C] p-[10px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                width="12"
-                viewBox="0 0 512 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#FFFFFF"
-                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-            </div>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <!-- footer section  -->
-    <footer class="bg-[#1C1C1C] px-5 py-[72px] lg:py-24">
-      <!-- main part -->
-      <div class="space-y-8 md:space-y-12">
-        <div class="mx-auto w-max">
-          <a class="flex items-center space-x-2">
-            <!-- arrow container -->
-            <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                width="12"
-                viewBox="0 0 512 512"
-              >
-                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  fill="#1c1c1c"
-                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-            </div>
-
-            <!-- brand name container -->
-            <p class="text-3xl font-extrabold text-[#E9E9E9]">Rinterio</p>
-          </a>
-        </div>
-        <div class="space-y-4 text-center">
-          <p class="mx-auto w-11/12 max-w-2xl font-medium text-[#737373]">
-            The barn house captivates with its blend of rustic charm and modern
-            sophistication, featuring weathered wood, sleek metal accents.
+          <!-- other part  -->
+          <h1 class="text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl">
+            Read Our Articles and News
+          </h1>
+          <p class="text-sm font-medium text-[#494949] md:text-base">
+            The barn house captivates with its blend of rustic charm and
+            modern sophistication, featuring weathered wood, sleek metal
+            accents.
           </p>
         </div>
-        <ul
-          class="mx-auto w-max space-y-8 text-center md:flex md:items-center md:space-x-24 md:space-y-0 lg:space-x-28"
-        >
-          <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
-            <a href="">Home</a>
-          </li>
-          <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
-            <a href="">Services</a>
-          </li>
-          <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
-            <a href="">Portfolio</a>
-          </li>
-          <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
-            <a href="">Blogs</a>
-          </li>
-          <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
-            <a href="">Contact Us</a>
-          </li>
-        </ul>
-        <!-- footer button part  -->
-        <a
-          class="mx-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-full bg-[#ABEF5F] px-5 py-3 md:w-max"
-        >
+
+        <!-- container part  -->
+        <div class="space-y-6 md:space-y-5 lg:flex lg:space-x-6 lg:space-y-0">
+          <!-- card number 1 -->
+          <div class="w-full space-y-4 rounded-2xl bg-white p-5 md:flex md:items-center md:space-x-4 lg:inline-block">
+            <div class="md:w-[400px] lg:w-auto">
+              <img src="./assets/images/article1.png" class="w-full" alt="" />
+            </div>
+            <div class="space-y-4">
+              <div class="flex space-x-3">
+                <div class="flex space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-[#737373]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                  </svg>
+
+                  <p class="text-sm font-medium text-[#737373]">
+                    July14, 2024
+                  </p>
+                </div>
+                <div class="flex space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-[#737373]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
+
+                  <p class="text-sm font-medium text-[#737373]">
+                    July14, 2024
+                  </p>
+                </div>
+              </div>
+              <h2 class="text-xl font-extrabold text-[#494949]">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-base font-normal text-[#737373]">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a class="flex cursor-pointer items-center space-x-2">
+                <!-- btn text -->
+                <p class="text-base font-bold text-[#212121] md:text-lg">
+                  Read More
+                </p>
+                <!-- btn logo -->
+                <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#1c1c1c"
+                      d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- card number 2 -->
+          <div class="w-full space-y-4 rounded-2xl bg-white p-5 md:flex md:items-center md:space-x-4 lg:inline-block">
+            <div class="md:w-[400px] lg:w-auto">
+              <img src="./assets/images/article2.png" class="w-full" alt="" />
+            </div>
+            <div class="space-y-4">
+              <div class="flex space-x-3">
+                <div class="flex space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-[#737373]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                  </svg>
+
+                  <p class="text-sm font-medium text-[#737373]">
+                    July14, 2024
+                  </p>
+                </div>
+                <div class="flex space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-[#737373]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
+
+                  <p class="text-sm font-medium text-[#737373]">
+                    July14, 2024
+                  </p>
+                </div>
+              </div>
+              <h2 class="text-xl font-extrabold text-[#494949]">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-base font-normal text-[#737373]">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a class="flex cursor-pointer items-center space-x-2">
+                <!-- btn text -->
+                <p class="text-base font-bold text-[#212121] md:text-lg">
+                  Read More
+                </p>
+                <!-- btn logo -->
+                <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#1c1c1c"
+                      d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- card number 3 -->
+          <div class="w-full space-y-4 rounded-2xl bg-white p-5 md:flex md:items-center md:space-x-4 lg:inline-block">
+            <div class="md:w-[400px] lg:w-auto">
+              <img src="./assets/images/article3.png" class="w-full" alt="" />
+            </div>
+            <div class="space-y-4">
+              <div class="flex space-x-3">
+                <div class="flex space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-[#737373]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                  </svg>
+
+                  <p class="text-sm font-medium text-[#737373]">
+                    July14, 2024
+                  </p>
+                </div>
+                <div class="flex space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-[#737373]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
+
+                  <p class="text-sm font-medium text-[#737373]">
+                    July14, 2024
+                  </p>
+                </div>
+              </div>
+              <h2 class="text-xl font-extrabold text-[#494949]">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="text-base font-normal text-[#737373]">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <a class="flex cursor-pointer items-center space-x-2">
+                <!-- btn text -->
+                <p class="text-base font-bold text-[#212121] md:text-lg">
+                  Read More
+                </p>
+                <!-- btn logo -->
+                <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="#1c1c1c"
+                      d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Let’s Discuss Next Project -->
+    <section
+      class="border-4 border-solid border-white bg-cover bg-center bg-no-repeat px-6 py-8 md:border-8 md:py-[72px] lg:py-24"
+      style="background-image: url(&quot;./assets/images/bg.jpg&quot;)">
+      <div class="container mx-auto max-w-4xl space-y-8">
+        <!-- Text part  -->
+        <div class="mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6">
+          <!-- badge part -->
+          <div class="mx-auto flex w-max items-center space-x-1 rounded-full bg-[#ABEF5F33] bg-white px-4 py-2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#494949"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+            </svg>
+            <p class="">Let’s Connect</p>
+          </div>
+          <!-- other part  -->
+          <h1 class="text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl">
+            Let’s Discuss Next Project
+          </h1>
+          <p class="text-sm font-medium text-[#494949] md:text-base">
+            The barn house captivates with its blend of rustic charm and
+            modern sophistication, featuring weathered wood, sleek metal
+            accents.
+          </p>
+        </div>
+
+        <!-- container part  -->
+        <div class="flex flex-col space-y-6">
+          <div class="grid grid-cols-1 gap-y-5 md:grid-cols-2 md:gap-x-5 md:gap-y-6 lg:gap-x-6">
+            <input type="text"
+              class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
+              placeholder="First Name*" />
+            <input type="text"
+              class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
+              placeholder="Last Name*" />
+            <input type="text"
+              class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
+              placeholder="Phone Number*" />
+            <input type="text"
+              class="rounded-full border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
+              placeholder="Email Number*" />
+          </div>
+          <textarea name="" id=""
+            class="rounded-[32px] border border-solid border-[#E9E9E9] bg-white p-5 placeholder:text-[#A0A0A0]"
+            placeholder="Write your message here" rows="8"></textarea>
+        </div>
+        <a class="btn btn-block cursor-pointer space-x-2 rounded-full bg-[#ABEF5F] sm:flex">
           <!-- btn text -->
-          <p class="text-xl font-bold text-[#1C1C1C]">Book Consult</p>
+          <p class="text-xl font-extrabold text-[#1C1C1C]">Send Mail</p>
           <!-- btn logo -->
           <div class="-rotate-45 rounded-full bg-[#1C1C1C] p-[10px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="12"
-              width="12"
-              viewBox="0 0 512 512"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
               <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-              <path
-                fill="#FFFFFF"
-                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-              />
+              <path fill="#FFFFFF"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
             </svg>
           </div>
         </a>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <!-- footer section  -->
+  <footer class="bg-[#1C1C1C] px-5 py-[72px] lg:py-24">
+    <!-- main part -->
+    <div class="space-y-8 md:space-y-12">
+      <div class="mx-auto w-max">
+        <a class="flex items-center space-x-2">
+          <!-- arrow container -->
+          <div class="-rotate-45 rounded-full bg-[#ABEF5F] p-[10px]">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#1c1c1c"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+            </svg>
+          </div>
+
+          <!-- brand name container -->
+          <p class="text-3xl font-extrabold text-[#E9E9E9]">Rinterio</p>
+        </a>
+      </div>
+      <div class="space-y-4 text-center">
+        <p class="mx-auto w-11/12 max-w-2xl font-medium text-[#737373]">
+          The barn house captivates with its blend of rustic charm and modern
+          sophistication, featuring weathered wood, sleek metal accents.
+        </p>
+      </div>
+      <ul class="mx-auto w-max space-y-8 text-center md:flex md:items-center md:space-x-24 md:space-y-0 lg:space-x-28">
+        <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
+          <a href="">Home</a>
+        </li>
+        <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
+          <a href="">Services</a>
+        </li>
+        <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
+          <a href="">Portfolio</a>
+        </li>
+        <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
+          <a href="">Blogs</a>
+        </li>
+        <li class="text-base font-medium text-[#E9E9E9] md:font-normal">
+          <a href="">Contact Us</a>
+        </li>
+      </ul>
+      <!-- footer button part  -->
+      <a
+        class="mx-auto flex w-full cursor-pointer items-center justify-center space-x-2 rounded-full bg-[#ABEF5F] px-5 py-3 md:w-max">
+        <!-- btn text -->
+        <p class="text-xl font-bold text-[#1C1C1C]">Book Consult</p>
+        <!-- btn logo -->
+        <div class="-rotate-45 rounded-full bg-[#1C1C1C] p-[10px]">
+          <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path fill="#FFFFFF"
+              d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </footer>
+</body>
+
 </html>
