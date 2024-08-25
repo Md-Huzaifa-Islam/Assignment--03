@@ -13,12 +13,6 @@
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-
-    header {
-      background-image: linear-gradient(0deg,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 0) 100%);
-    }
   </style>
 
   <!-- tailwind config  -->
@@ -38,9 +32,9 @@
 <body class="font-manrope">
   <!-- header section  -->
   <header
-    class="space-y-7 px-5 pb-10 pt-9 md:container md:mx-auto md:space-y-12 md:pb-20 md:pt-10 lg:space-y-10 lg:pb-32 lg:pt-12">
+    class="space-y-7 px-5 pb-10 pt-9  bg-[#F4F4F4] bg-gradient-to-b from-[#ffffff00] to-[#FFFFFF] md:space-y-12 md:pb-20 md:pt-10 lg:space-y-10 lg:pb-32 lg:pt-12">
     <!-- nav bar section  -->
-    <nav class="flex items-center justify-between">
+    <nav class="flex items-center justify-between md:container md:mx-auto">
       <!-- brand name  full part   -->
       <div>
         <a class="flex items-center space-x-2">
@@ -152,7 +146,7 @@
     <!-- banner section  -->
 
     <div
-      class="flex flex-col items-center space-y-5 md:mx-auto md:max-w-2xl lg:w-11/12 lg:max-w-5xl lg:space-y-8 2xl:max-w-none">
+      class="flex flex-col md:container md:mx-auto items-center space-y-5 md:mx-auto md:max-w-2xl lg:w-11/12 lg:max-w-5xl lg:space-y-8 2xl:max-w-none">
       <!-- first banner part  -->
       <div class="flex flex-col items-center space-y-4 text-center lg:space-y-6">
         <div class="w-10/12 md:max-w-md lg:max-w-xl">
@@ -193,10 +187,10 @@
     <section
       class="px-5 pt-8 md:container md:mx-auto md:pt-20 lg:pt-24 space-y-10 md:space-y-20 lg:space-y-28 relative">
       <!-- text container  -->
-      <div class="grid gap-6 lg:gap-9 grid-rows-[auto_230px] md:grid-rows-[auto_385px] lg:grid-rows-1 lg:grid-cols-2">
+      <div class="grid gap-6 lg:gap-9 grid-rows-[auto_230px] md:grid-rows-[auto_385px] lg:grid-rows-1 lg:grid-cols-2 ">
 
         <!-- text part -->
-        <div class="mx-auto space-y-4 md:space-y-6">
+        <div class="mx-auto space-y-4 md:space-y-6 lg:w-full">
           <!-- badge part -->
           <div class="mx-auto flex w-max items-center lg:mx-0 space-x-1 rounded-full bg-white px-4 py-2">
             <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
@@ -208,7 +202,7 @@
           </div>
           <!-- other part  -->
           <h1
-            class="text-2xl text-center lg:text-left font-bold md:max-w-2xl mx-auto text-[#212121] md:text-3xl lg:text-4xl">
+            class="text-2xl text-center lg:text-left font-bold md:max-w-2xl  mx-auto text-[#212121] md:text-3xl lg:text-4xl">
             We design thoughtful, liveable spaces
           </h1>
           <p class="text-sm font-medium text-center lg:text-left md:max-w-2xl mx-auto text-[#494949] md:text-base">
