@@ -718,6 +718,140 @@
       </div>
     </section>
 
+    <section
+      class=" pb-8 pt-8  md:pb-[72px] md:pt-20 lg:pb-28 lg:pt-24 lg:bg-[url(./assets/images/faq.avif)] lg:bg-[#ffffffc3] border-2 border-solid  border-[#ABEF5F]      lg:bg-blend-overlay  ">
+      <div class="space-y-4 px-5 md:space-y-6 lg:space-y-8 md:container md:mx-auto">
+        <!-- Text part  -->
+        <div class="mx-auto space-y-4 text-center md:max-w-2xl md:space-y-6">
+          <!-- badge part -->
+          <div class="mx-auto flex w-max items-center space-x-1 rounded-full bg-[#ABEF5F33] px-4 py-2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="#494949"
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+            </svg>
+            <p class="">FAQ</p>
+          </div>
+          <!-- other part  -->
+          <h1 class="text-2xl font-bold text-[#212121] md:text-3xl lg:text-4xl">
+            Got Questions? We Have Answers!
+          </h1>
+          <p class="text-sm font-medium text-[#494949] md:text-base">
+            Wondering how to get started on building your dream home? We've answered the most common questions below. If
+            you need more help, don’t hesitate to contact us!
+          </p>
+        </div>
+
+        <!-- container part  -->
+        <div class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-[1.3fr_1fr] lg:items-center lg:gap-28 flex flex-col">
+          <!-- frequently asked question section  -->
+          <div class="space-y-3 lg:space-y-6 flex-col flex items-center lg:items-start">
+            <p class=" text-xl font-medium text-center lg:text-2xl lg:font-bold lg:mb-4 lg:pl-4">Some FAQ </p>
+            <div class="collapse collapse-arrow bg-white shadow-md">
+              <input type="radio" name="my-accordion-2" />
+              <div class="collapse-title text-base font-normal">What kind of construction do you guys specialize in?
+              </div>
+              <div class="collapse-content">
+                <p class="text-sm">We specialize in residential construction, focusing on designing and building custom
+                  homes that meet our clients' unique needs and preferences. Our expertise includes everything from
+                  modern urban residences to traditional countryside homes, with an emphasis on quality, innovation, and
+                  sustainability in every project.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow bg-white shadow-md">
+              <input type="radio" name="my-accordion-2" />
+              <div class="collapse-title text-base font-normal">How long does a typical construction project take?</div>
+              <div class="collapse-content">
+                <p class="text-sm">Project timelines can vary depending on the complexity and size of the home.
+                  Generally, a typical residential construction project takes between 6 to 12 months from initial design
+                  to completion. We work closely with you to establish a detailed schedule and keep you updated
+                  throughout the process to ensure timely delivery.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow bg-white shadow-md">
+              <input type="radio" name="my-accordion-2" />
+              <div class="collapse-title text-base font-normal">How do you charge for projects? By the hour, job, etc.?
+              </div>
+              <div class="collapse-content">
+                <p class="text-sm">We typically charge based on the scope and complexity of the project. This can
+                  include a fixed fee for the entire job, a percentage of the total construction cost, or a combination
+                  of both. We provide a detailed estimate after discussing your project requirements and ensure
+                  transparency throughout the process. Contact us to get a customized quote for your specific needs</p>
+              </div>
+            </div>
+
+
+            <!-- see more  -->
+            <!-- You can open the modal using ID.showModal() method -->
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn btn-info lg:px-10 lg:text-lg lg:font-bold btn-outline bg-white"
+              onclick="my_modal_2.showModal()">See
+              more</button>
+            <dialog id="my_modal_2" class="modal">
+              <div class="modal-box">
+                <div class="collapse collapse-arrow ">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium">Who is responsible for getting the necessary permits?
+                  </div>
+                  <div class="collapse-content">
+                    <p>We handle the process of obtaining all necessary permits for your project. Our team ensures that
+                      all required approvals and inspections are completed, so you don’t have to worry about navigating
+                      the regulatory aspects. We keep you informed throughout the process to ensure everything is in
+                      compliance with local building codes and regulations</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow ">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium">Do you offer free in-person estimates?</div>
+                  <div class="collapse-content">
+                    <p>Yes, we offer free in-person estimates to discuss your project in detail. This allows us to
+                      understand your vision, assess the scope of work, and provide an accurate estimate tailored to
+                      your needs. Contact us to schedule a convenient time for your free consultation.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow ">
+                  <input type="radio" name="my-accordion-2" />
+                  <div class="collapse-title text-xl font-medium">What is your service area?</div>
+                  <div class="collapse-content">
+                    <p>We primarily serve [City/Region], but we are also available for projects in surrounding areas. If
+                      you’re located outside our main service area, please reach out to us to discuss your project—we
+                      may be able to accommodate your needs</p>
+                  </div>
+                </div>
+              </div>
+              <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+              </form>
+            </dialog>
+
+
+          </div>
+          <!-- drop your question section  -->
+          <div class="space-y-3 flex flex-col items-center lg:items-start">
+            <p class="text-xl font-medium text-center lg:text-2xl lg:font-bold lg:mb-4 lg:pl-4">Still have any question
+              ? </p>
+            <textarea name="" id="" class="rounded-xl border shadow-md w-full bg-white p-5 placeholder:text-[#A0A0A0]"
+              placeholder="Write your question here" rows="4"></textarea>
+            <a class="btn cursor-pointer  rounded-full bg-[#ABEF5F] sm:flex">
+              <!-- btn text -->
+              <p class="text-base font-bold text-[#1C1C1C]">
+                Send message
+              </p>
+              <!-- btn logo -->
+              <div class="-rotate-45 rounded-full bg-[#1C1C1C] p-[8px]">
+                <svg xmlns="http://www.w3.org/2000/svg" height="8" width="8" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="#FFFFFF"
+                    d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Let’s Discuss Next Project -->
     <section
       class="border-4 border-solid border-white bg-cover bg-center bg-no-repeat px-6 py-8 md:border-8 md:py-[72px] lg:py-24"
